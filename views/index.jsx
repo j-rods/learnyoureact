@@ -16,8 +16,24 @@ class TodoList extends React.Component {
   render() {
     return (
       <div className="todoList">
-        I am a TodoList.
+        <table style={{border: "2px solid black"}}>
+          <tbody>
+            <Todo title="Shopping">Milk</Todo>
+            <Todo title="Hair cut">13:00</Todo>
+          </tbody>
+        </table>
       </div>
+    );
+  }
+}
+
+class Todo extends React.Component {
+  render () {
+    return (
+      <tr>
+        <td style={{border: "1px solid black"}}>{this.props.title}</td>
+        <td style={{border: "1px solid black"}}>{this.props.children}</td>
+      </tr>
     );
   }
 }
@@ -32,13 +48,5 @@ class TodoForm extends React.Component {
   }
 }
 
-//Using react components
-//build apps using react.js by combining several components
-//these use html tags together with jsx notation
-
-//to render a react component, create a local variable that starts
-//with uppercase letter
-
-//react js uses upper vs lower case to distinguish between
-//local component classes and HTML tags
+//passing values from a parent component to a child component
 
