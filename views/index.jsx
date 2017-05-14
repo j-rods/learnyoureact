@@ -2,14 +2,43 @@ import React from 'react';
 
 export default class TodoBox extends React.Component{
   render() {
-    return <div className='todoBox'>
-      Hello, world!
+    return (
+      <div className='todoBox'>
+        <h1>Todos</h1>
+        <TodoList />
+        <TodoForm />
       </div>
+    );
   }
 }
 
-//this code uses optional React.js JSX syntax to create the views
-//which we will use throughout the rest of the workshop
+class TodoList extends React.Component {
+  render() {
+    return (
+      <div className="todoList">
+        I am a TodoList.
+      </div>
+    );
+  }
+}
 
-//run node program.js and access http://localhost:3000
-//to see the html output in the browser
+class TodoForm extends React.Component {
+  render() {
+    return (
+      <div className="todoForm">
+        I am a TodoForm.
+      </div>
+    );
+  }
+}
+
+//Using react components
+//build apps using react.js by combining several components
+//these use html tags together with jsx notation
+
+//to render a react component, create a local variable that starts
+//with uppercase letter
+
+//react js uses upper vs lower case to distinguish between
+//local component classes and HTML tags
+
